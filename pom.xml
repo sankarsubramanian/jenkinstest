@@ -21,7 +21,7 @@
           <plugin>
               <groupId>org.codehaus.groovy.maven</groupId>
               <artifactId>gmaven-plugin</artifactId>
-              <version>1.3</version>
+              <version>1.0</version>
               <executions>
                   <execution>
                       <phase>generate-resources</phase>
@@ -40,7 +40,7 @@
                               def jsonSlurper = new JsonSlurper()
                               def response = solr.post(
                               contentType: JSON,
-                              body: jsonSlurper.parseText('{"auth_token": "ac2e1ab0-0805-45df-af1f-a82f070ba9b7", "job_id": 8}')
+                              body: jsonSlurper.parseText('{"auth_token": "ac2e1ab0-0805-45df-af1f-a82f070ba9b7", "job_id": 1}')
                               )
                               log.info "Solr response body: ${response.data}"
                               log.info "Solr response report_id: ${response.data.report_id}"
